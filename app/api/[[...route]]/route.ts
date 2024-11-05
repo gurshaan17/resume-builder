@@ -11,10 +11,18 @@ const app = new Hono();
 app.use("*", logger());
 
 app.onError((err, c) => {
+  console.error('Error:', err);
   if (err instanceof HTTPException) {
     return err.getResponse();
   }
-  return c.json({ error: "internal error" });
+  return c.json(
+    { 
+      success: false, 
+      message: "Internal server error",
+      error: err.message 
+    }, 
+    500
+  );
 });
 
 const routes = app.basePath("/api").route("/document", documentRoute);
