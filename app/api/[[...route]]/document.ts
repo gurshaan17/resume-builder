@@ -465,6 +465,8 @@ const documentRoute = new Hono()
       const documents = await db
         .select()
         .from(documentTable)
+        //changed
+        .orderBy(desc(documentTable.updatedAt))
         .where(
           and(
             eq(documentTable.userId, userId),
