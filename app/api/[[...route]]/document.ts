@@ -272,7 +272,7 @@ const documentRoute = new Hono()
     }
   )
   .patch(
-    "/restore/archive",
+    "/retore/archive",
     zValidator(
       "json",
       z.object({
