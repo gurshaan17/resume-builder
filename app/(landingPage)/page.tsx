@@ -11,6 +11,7 @@ export default function Home() {
           <div className="flex flex-col mt-5 items-center text-center">
             <h1 className="text-6xl font-black">
               <p>Get dream jobs with our</p>
+              
               <p>
                 <span className="bg-gradient-to-r from-primary via-purple-300 to-primary bg-clip-text text-transparent animate-sparkle">
                   AI Powered
