@@ -2,7 +2,6 @@ import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
 import { and, desc, eq, ne } from "drizzle-orm";
 import { z } from "zod";
-import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 import {
   createDocumentTableSchema,
   DocumentSchema,
